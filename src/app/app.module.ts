@@ -12,6 +12,7 @@ import { ReceiptComponent } from './receipt/receipt.component';
 import { ReceiptSelectorComponent } from './receipt-selector/receipt-selector.component'
 import { routing } from './app.routing';
 import { PageComponent } from './page/page.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageComponent } from './page/page.component';
     TaxPipePipe,
     ReceiptComponent,
     ReceiptSelectorComponent,
-    PageComponent
+    PageComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
