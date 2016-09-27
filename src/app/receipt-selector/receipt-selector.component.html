@@ -4,7 +4,7 @@
     <th>Order total</th>
   </tr>
   <tr *ngFor="let order of orders">
-    <td>{{order.id}}</td>
+    <td><a routerLink="../receipt/{{order.id}}">{{order.id}}</a></td>
     <td>{{order.items | totalPipe | currency:"myr"}}</td>
   </tr>
 

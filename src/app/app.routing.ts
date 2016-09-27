@@ -4,6 +4,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import { ReceiptComponent } from './receipt/receipt.component';
 import { ReceiptSelectorComponent } from './receipt-selector/receipt-selector.component';
+import { PageComponent } from './page/page.component'
 
 const appRoute:Routes = [
     {
@@ -16,9 +17,17 @@ const appRoute:Routes = [
         component:ReceiptSelectorComponent
     },
     {
+        path: "receipt/:id",
+        component: ReceiptComponent
+    },
+    {
+        path:"about",
+        component:PageComponent
+    }
+    /*{
         path: "receipt",
         component: ReceiptComponent
-    }
+    }*/
 ]
 
 export const routing:ModuleWithProviders = RouterModule.forRoot(appRoute)

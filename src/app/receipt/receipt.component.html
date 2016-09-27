@@ -1,3 +1,4 @@
+<div *ngIf="reciptOrderInput">
 <h1>
   {{reciptOrderInput.create_time | date}}
 </h1>
@@ -9,7 +10,7 @@
     <th>Unit Price</th>
     <th>Total</th>
   </tr>
-  <tr *ngFor="let orderItem of reciptOrderInput.items">
+  <tr *ngFor="let orderItem of reciptOrderInput?.items">
     <td>{{orderItem.item}}</td>
     <td>{{orderItem.quantity}}</td>
     <td>{{orderItem.unit_price | currency:'myr'}}</td>
@@ -29,7 +30,5 @@
     <td>{{(reciptOrderInput.items | totalPipe) + (reciptOrderInput.items | totalPipe | taxPipe) | currency:"myr"}}</td>
   </tr>
 
-
-
 </table>
-
+</div>
