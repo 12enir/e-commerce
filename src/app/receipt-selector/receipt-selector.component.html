@@ -1,0 +1,11 @@
+<table class="table">
+  <tr>
+    <th>Order Id</th>
+    <th>Order total</th>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td>{{order.id}}</td>
+    <td>{{order.items | totalPipe | currency:"myr"}}</td>
+  </tr>
+
+</table>
