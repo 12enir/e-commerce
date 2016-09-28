@@ -5,7 +5,11 @@
   </tr>
   <tr *ngFor="let order of orders">
     <td><a routerLink="../receipt/{{order.id}}">{{order.id}}</a></td>
+    <td><a routerLink="../editor/{{order.id}}">Edit</a></td>
     <td>{{order.items | totalPipe | currency:"myr"}}</td>
+    <td><button (click)="deleteOrder(order.id)">X</button></td>
   </tr>
 
+  <button (click)="saveToDB()">Save to DB</button>
+  <button (click)="loadDataFromJson()">Load data</button>
 </table>

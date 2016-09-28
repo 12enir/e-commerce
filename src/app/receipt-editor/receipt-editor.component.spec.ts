@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { FormComponent } from './form.component';
+import { ReceiptEditorComponent } from './receipt-editor.component';
 
-describe('Component: Form', () => {
+describe('Component: ReceiptEditor', () => {
   it('should create an instance', () => {
-    let component = new FormComponent();
+    let component = new ReceiptEditorComponent();
     expect(component).toBeTruthy();
   });
 });

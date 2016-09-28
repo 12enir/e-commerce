@@ -1,0 +1,26 @@
+<div *ngIf="receiptOrderInput">
+  <h3>Editing order: {{receiptOrderInput.id}}</h3>
+  <pre>{{receiptOrderInput | json}}</pre>
+  <div class="row">
+    <div class="col-md-1">
+      <label>Create date</label>
+    </div>
+    <div class="col-md-11">
+      <input type="date" [(ngModel)]="orderDate"/>
+    </div>
+  </div>
+
+  <label>Editing Order Items:</label>
+  <table class="table">
+    <tr class="row" *ngFor="let orderItem of receiptOrderInput.items; let i = index">
+      <td class="col-md-3"><input type="text" [(ngModel)]="orderItem.item" placeholder="Item" /></td>
+      <td class="col-md-3"><input type="number" [(ngModel)]="orderItem.quantity" placeholder="Quantity" /></td>
+      <td class="col-md-3"><input type="text" [(ngModel)]="orderItem.unit_price" placeholder="Unit Price" /></td>
+      <td><button (click)="deleteOrderItem(i)">X</button></td>
+    </tr>
+  </table>
+  
+  <button (click)="addOrderItem()">Add Order Item</button>
+  <button (click)="onSave()">Save to DB</button>
+
+</div>

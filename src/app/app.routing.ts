@@ -4,8 +4,8 @@ import {Routes, RouterModule} from '@angular/router';
 
 import { ReceiptComponent } from './receipt/receipt.component';
 import { ReceiptSelectorComponent } from './receipt-selector/receipt-selector.component';
-import { PageComponent } from './page/page.component'
-import { FormComponent } from ''
+import { PageComponent } from './page/page.component';
+import { ReceiptEditorComponent } from './receipt-editor/receipt-editor.component'
 
 const appRoute:Routes = [
     {
@@ -24,9 +24,10 @@ const appRoute:Routes = [
     {
         path:"about",
         component:PageComponent
-    }, {
-        path:"form",
-        component:FormComponent
+    }, 
+    {
+        path:"editor/:id",
+        component:ReceiptEditorComponent
     }
 
 

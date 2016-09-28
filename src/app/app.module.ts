@@ -12,7 +12,7 @@ import { ReceiptComponent } from './receipt/receipt.component';
 import { ReceiptSelectorComponent } from './receipt-selector/receipt-selector.component'
 import { routing } from './app.routing';
 import { PageComponent } from './page/page.component';
-import { FormComponent } from './form/form.component';
+import { ReceiptEditorComponent } from './receipt-editor/receipt-editor.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { FormComponent } from './form/form.component';
     ReceiptComponent,
     ReceiptSelectorComponent,
     PageComponent,
-    FormComponent
+    ReceiptEditorComponent
   ],
   imports: [
     BrowserModule,
